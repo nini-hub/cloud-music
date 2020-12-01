@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon"  href="./apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-touch-icon114.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon180.png">
+    <script>
+      let scale = 1.0 / window.devicePixelRatio;
+      let text = `<meta name="viewport" content="width=device-width, initial-scale=${scale}, maximum-scale=${scale}, minimum-scale=${scale}, user-scalable=no">`;
+      document.write(text);
+      document.documentElement.style.fontSize = window.innerWidth / 7.5 + "px";
+      document.documentElement.setAttribute('data-dpr', window.devicePixelRatio + '');
+      document.documentElement.setAttribute('data-theme', 'theme');
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
