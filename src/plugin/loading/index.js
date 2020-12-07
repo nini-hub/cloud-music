@@ -26,7 +26,6 @@ export default {
     }
     // 添加全局方法
     Vue.showLoading = function () {
-      console.log('show')
       LoadingInstance.isShow = true
     }
     Vue.hiddenLoading = function () {

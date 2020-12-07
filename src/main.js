@@ -6,10 +6,13 @@ import fastclick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 import './assets/css/base.scss'
 import Loading from './plugin/loading/index'
+import MetaInfo from 'vue-meta-info'
 
 Vue.use(Loading, {
   title: '我来了我来了'
 })
+
+Vue.use(MetaInfo)
 
 fastclick.attach(document.body)
 Vue.use(VueLazyload)
@@ -23,5 +26,6 @@ Vue.use(VueLazyload, {
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  mounted: () => document.dispatchEvent(new Event('x-app-rendered'))
 }).$mount('#app')
